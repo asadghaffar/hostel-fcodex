@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Hostel</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Powered By fcodex</string>
+    <string name="nav_header_subtitle">info@fcodex.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Exit App String -->
+    <string name="exit_app_text">Are You Sure You want to exit</string>
+    <string name="google_maps_key">AIzaSyCWRQ7IE-FbCPyPldftprEsDTQPcLK8P1g</string>
+
+    <string name="menu_hostel">Hostel</string>
+    <string name="menu_share_apps">Share App</string>
+    <string name="menu_more_apps">More Apps</string>
+    <string name="menu_privacy_policy">Privacy Policy</string>
+    <string name="menu_exit_app">Exit</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>

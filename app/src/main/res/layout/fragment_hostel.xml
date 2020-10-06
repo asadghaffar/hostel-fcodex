@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.HostelFragment">
+
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        android:visibility="visible"
+        android:id="@+id/hostelRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        app:shimmer_demo_angle="20"
+        app:shimmer_demo_child_count="10"
+        app:shimmer_demo_grid_child_count="1"
+        app:shimmer_demo_layout="@layout/layout_demo_grid"
+        app:shimmer_demo_layout_manager_type="grid" />
+
+    <LinearLayout
+        android:id="@+id/layoutNoHostel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:weightSum="10">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="5"
+            android:src="@drawable/ic_no_hostel" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:paddingLeft="130dp"
+            android:text="No Hostel Avaliable"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</FrameLayout>
