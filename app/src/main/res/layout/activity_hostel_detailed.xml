@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.HostelDetailedActivity">
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -196,15 +196,13 @@
                         android:textSize="25sp" />
 
                     <fragment
-                        android:id="@+id/map"
+                        android:id="@+id/mapFragment"
                         android:name="com.google.android.gms.maps.SupportMapFragment"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:clickable="true"
-                        android:enabled="true"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        tools:context=".Activities.HostelDetailedActivity" />
+                        tools:context=".Activities.HostelDetailedActivity"
+                        android:focusable="true" />
 
                 </LinearLayout>
 
