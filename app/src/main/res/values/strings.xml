@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hostel</string>
+    <string name="app_name">Amber Girls Hostel</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Powered By fcodex</string>
@@ -17,5 +17,12 @@
     <string name="menu_privacy_policy">Privacy Policy</string>
     <string name="menu_exit_app">Exit</string>
     <string name="title_activity_maps">Map</string>
+    <string name="enter_email_hint">Enter Email</string>
+    <string name="enter_password_hint">Enter Password</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="login_text">Login</string>
+    <string name="or_text">Or</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="reset_password">Reset Password</string>
 
 </resources>

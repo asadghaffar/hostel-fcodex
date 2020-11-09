@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "754956768007",
+    "firebase_url": "https://hostel-fcodex.firebaseio.com",
+    "project_id": "hostel-fcodex",
+    "storage_bucket": "hostel-fcodex.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754956768007:android:a515e341ac1373f12ceba2",
+        "android_client_info": {
+          "package_name": "com.fcodex.hostel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754956768007-12vkoiubttn8ep7parahp0fbuk6fd3un.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fcodex.hostel",
+            "certificate_hash": "bacc46b09e552d562a8db20d64e755930ea605df"
+          }
+        },
+        {
+          "client_id": "754956768007-86ef8egb22gs1g8eqcelkb2ard9ihl66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD4FHDuLvR9eaDtOMM-WJL_ISeIn6oXM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754956768007-86ef8egb22gs1g8eqcelkb2ard9ihl66.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
