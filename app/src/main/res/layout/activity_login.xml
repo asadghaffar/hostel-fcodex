@@ -11,43 +11,47 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
         android:layout_margin="70dp"
+        android:layout_weight="5"
         android:src="@drawable/text" />
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:padding="30dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/enter_email_hint"
-        android:textColorHint="@color/black">
+        android:padding="30dp"
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/enterEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="10dp"
             android:inputType="textAutoComplete" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/enter_password_hint"
-        app:passwordToggleEnabled="true"
-        android:textColorHint="@color/black">
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textColorHint="@color/black"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/enterName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawablePadding="10dp"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -55,43 +59,43 @@
     <TextView
         android:id="@+id/forgetPassword"
         android:layout_width="match_parent"
-        android:textColor="@color/black"
+        android:layout_height="0dp"
         android:layout_margin="30dp"
+        android:layout_weight="1"
         android:gravity="right|center"
         android:text="@string/forget_password"
-        android:layout_weight="1"
-        android:layout_height="0dp"/>
+        android:textColor="@color/black" />
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:textColor="@color/white"
-        android:text="@string/login_text"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
-        android:layout_height="wrap_content"/>
+        android:text="@string/login_text"
+        android:textColor="@color/white" />
 
     <TextView
         android:layout_width="match_parent"
-        android:textColor="@color/black"
-        android:gravity="center"
-        android:text="@string/or_text"
+        android:layout_height="0dp"
         android:layout_marginBottom="20dp"
         android:layout_weight="1"
-        android:layout_height="0dp"/>
+        android:gravity="center"
+        android:text="@string/or_text"
+        android:textColor="@color/black" />
 
     <com.google.android.material.button.MaterialButton
-        android:backgroundTint="@color/white"
-        android:outlineSpotShadowColor="@color/transperant"
-        android:textAllCaps="false"
+        android:id="@+id/signUpButton"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        app:strokeColor="@color/colorPrimaryDark"
-        app:strokeWidth="1dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="@string/sign_up_text"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
-        android:layout_height="wrap_content"/>
+        android:backgroundTint="@color/white"
+        android:text="@string/create_account"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        app:strokeColor="@color/colorPrimaryDark"
+        app:strokeWidth="1dp" />
 
 </LinearLayout>

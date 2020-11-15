@@ -10,4 +10,7 @@
         android:name="com.fcodex.hostel.Fragments.HostelFragment"
         android:label="@string/menu_hostel"
         tools:layout="@layout/fragment_hostel" />
+
+
+
 </navigation>

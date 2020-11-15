@@ -45,34 +45,28 @@ public class ContactDetails extends AppCompatActivity {
     }
 
     private void onclick() {
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ContactDetails.this, MainActivity.class);
-                // Clear the back activity
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-            }
+        submit.setOnClickListener(view -> {
+            Intent intent = new Intent(ContactDetails.this, MainActivity.class);
+            // Clear the back activity
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
         });
 
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        submit.setOnClickListener(v -> {
 
-                String stringHostelName = hostelName.getText().toString().trim();
-                String stringHostelAddress = hostelAddress.getText().toString().trim();
-                String stringEnterName = enterName.getText().toString().trim();
-                String stringEnterEmail = enterEmail.getText().toString().trim();
-                String stringEnterNumber = enterNumber.getText().toString().trim();
+            String stringHostelName = hostelName.getText().toString().trim();
+            String stringHostelAddress = hostelAddress.getText().toString().trim();
+            String stringEnterName = enterName.getText().toString().trim();
+            String stringEnterEmail = enterEmail.getText().toString().trim();
+            String stringEnterNumber = enterNumber.getText().toString().trim();
 
-                if (stringEnterName.isEmpty()) {
-                    enterName.setError("Enter Name");
-                } else if (stringEnterEmail.isEmpty()) {
-                    enterEmail.setError("Enter Email");
-                } else if (stringEnterNumber.isEmpty()) {
-                    enterNumber.setError("Enter Number");
-                } else {
-                }
+            if (stringEnterName.isEmpty()) {
+                enterName.setError("Enter Name");
+            } else if (stringEnterEmail.isEmpty()) {
+                enterEmail.setError("Enter Email");
+            } else if (stringEnterNumber.isEmpty()) {
+                enterNumber.setError("Enter Number");
+            } else {
             }
         });
 
