@@ -42,7 +42,6 @@ public class SignUpActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
-
         signIn.setOnClickListener(v -> {
 
             String stringEnterNameSignUp = enterNameSignUp.getText().toString().trim();
@@ -51,15 +50,18 @@ public class SignUpActivity extends AppCompatActivity {
             String stringEnterPasswordSignUp = enterPasswordSignUp.getText().toString().trim();
             String stringEnterConfirmPasswordSignUp = enterConfirmPasswordSignUp.getText().toString().trim();
 
-            if (stringEnterNameSignUp.length() == 0 && stringEnterEmailSignUp.length() == 0 && stringEnterNumberSignUp.length() == 0 &&
-                    stringEnterPasswordSignUp.length() == 0 && stringEnterConfirmPasswordSignUp.length() == 0) {
+            if (stringEnterPasswordSignUp.equals(stringEnterConfirmPasswordSignUp)) {
+                Intent intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            } else Toast.makeText(this, "Password is not matched", Toast.LENGTH_SHORT).show();
+                if (stringEnterNameSignUp.length() == 0 && stringEnterEmailSignUp.length() == 0 && stringEnterNumberSignUp.length() == 0
+                            && stringEnterPasswordSignUp.length() == 0 && stringEnterConfirmPasswordSignUp.length() == 0) {
                 enterNameSignUp.setError("Enter Name");
                 enterEmailSignUp.setError("Enter Email");
                 enterNumberSignUp.setError("Enter Number");
                 enterPasswordSignUp.setError("Enter Password");
                 enterConfirmPasswordSignUp.setError("Enter Confirm Password");
-            } else if (!stringEnterPasswordSignUp.equals(stringEnterConfirmPasswordSignUp)) {
-                Toast.makeText(this, "Passwoord is not matched", Toast.LENGTH_SHORT).show();
             }
         });
 
