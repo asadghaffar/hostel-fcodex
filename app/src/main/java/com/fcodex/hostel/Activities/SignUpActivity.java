@@ -2,17 +2,21 @@ package com.fcodex.hostel.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.fcodex.hostel.R;
+import com.github.ybq.android.spinkit.SpinKitView;
+import com.github.ybq.android.spinkit.sprite.Sprite;
+import com.github.ybq.android.spinkit.style.DoubleBounce;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textview.MaterialTextView;
+
+import java.util.Objects;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -23,13 +27,14 @@ public class SignUpActivity extends AppCompatActivity {
     private TextInputEditText enterConfirmPasswordSignUp;
     private MaterialButton signIn;
     private ImageView backImageSignUp;
+    private SpinKitView spinLoading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         id();
         onClick();
 
@@ -42,30 +47,28 @@ public class SignUpActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
-        signIn.setOnClickListener(v -> {
+        signIn.setOnClickListener(v -> validation());
 
-            String stringEnterNameSignUp = enterNameSignUp.getText().toString().trim();
-            String stringEnterEmailSignUp = enterEmailSignUp.getText().toString().trim();
-            String stringEnterNumberSignUp = enterNumberSignUp.getText().toString().trim();
-            String stringEnterPasswordSignUp = enterPasswordSignUp.getText().toString().trim();
-            String stringEnterConfirmPasswordSignUp = enterConfirmPasswordSignUp.getText().toString().trim();
+    }
 
-            if (stringEnterPasswordSignUp.equals(stringEnterConfirmPasswordSignUp)) {
-                Intent intent = new Intent(this, LoginActivity.class);
-                startActivity(intent);
-                finish();
-            } else Toast.makeText(this, "Password is not matched", Toast.LENGTH_SHORT).show();
-                if (stringEnterNameSignUp.length() == 0 && stringEnterEmailSignUp.length() == 0 && stringEnterNumberSignUp.length() == 0
-                            && stringEnterPasswordSignUp.length() == 0 && stringEnterConfirmPasswordSignUp.length() == 0) {
-                enterNameSignUp.setError("Enter Name");
-                enterEmailSignUp.setError("Enter Email");
-                enterNumberSignUp.setError("Enter Number");
-                enterPasswordSignUp.setError("Enter Password");
-                enterConfirmPasswordSignUp.setError("Enter Confirm Password");
-            }
-        });
+    private void validation() {
+        String stringEnterNameSignUp = Objects.requireNonNull(enterNameSignUp.getText()).toString().trim();
+        String stringEnterEmailSignUp = Objects.requireNonNull(enterEmailSignUp.getText()).toString().trim();
+        String stringEnterNumberSignUp = Objects.requireNonNull(enterNumberSignUp.getText()).toString().trim();
+        String stringEnterPasswordSignUp = Objects.requireNonNull(enterPasswordSignUp.getText()).toString().trim();
+        String stringEnterConfirmPasswordSignUp = Objects.requireNonNull(enterConfirmPasswordSignUp.getText()).toString().trim();
 
-
+        if (stringEnterNameSignUp.length() == 0 || stringEnterEmailSignUp.length() == 0 || stringEnterNumberSignUp.length() == 0 ||
+                stringEnterPasswordSignUp.length() == 0 || stringEnterConfirmPasswordSignUp.length() == 0) {
+            Toast.makeText(this, "Fill the Required Fields", Toast.LENGTH_SHORT).show();
+        } else if (!stringEnterPasswordSignUp.equals(stringEnterConfirmPasswordSignUp)) {
+            Toast.makeText(this, "Password Not Matched", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Password matched", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     private void id() {

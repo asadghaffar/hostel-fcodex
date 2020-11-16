@@ -8,12 +8,9 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.daimajia.androidanimations.library.Techniques;
 import com.fcodex.hostel.R;
-import com.google.android.gms.common.internal.Constants;
-import com.viksaa.sssplash.lib.activity.AwesomeSplash;
-import com.viksaa.sssplash.lib.cnst.Flags;
-import com.viksaa.sssplash.lib.model.ConfigSplash;
+
+import java.util.Objects;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -27,11 +24,10 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash_screen);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         splashScreen();
 
     }
-
 
     private void splashScreen() {
         new Handler().postDelayed(() -> {
